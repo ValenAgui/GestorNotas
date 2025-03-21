@@ -19,3 +19,21 @@ def login():
             return u
     print("Usuario o contraseña incorrectos.\n")
     return None
+
+def agregar_nota():
+    print("\n--- Agregar Nota ---")
+    estudiante = input("Ingrese nombre del estudiante: ")
+    materia = input("Ingrese la materia: ")
+    nota = float(input("Ingrese la nota: "))
+    notas.append({"estudiante": estudiante, "materia": materia, "nota": nota})
+    print("Nota agregada con éxito.\n")
+
+def ver_notas():
+    print("\n--- Ver Notas ---")
+    estudiante = input("Ingrese su nombre para ver sus notas: ")
+    encontradas = [n for n in notas if n["estudiante"] == estudiante]
+    if encontradas:
+        for n in encontradas:
+            print(f"Materia: {n['materia']}, Nota: {n['nota']}")
+    else:
+        print("No se encontraron notas.\n")
