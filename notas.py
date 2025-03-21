@@ -8,3 +8,6 @@ def registrar_usuario():
     contrasena = input("Ingrese contraseña: ")
     usuarios.append({"usuario": usuario, "tipo": tipo, "contrasena": contrasena})
     print("Usuario registrado con éxito.\n")
+
+    #registro finalizado
+    
